@@ -8,11 +8,16 @@
   <meta name="description" content="最近在用python爬取一些网站的图片，学习期间遇到一些问题，也收获了一些知识，现在整理下有关内容。
 
 Python基础知识的学习
-整理中。。。
+这里就简单整理了我爬虫中使用到的，并且与Java语法不同的地方。
 
-urllib2库的基本使用
-urllib2是Python获取URL(Uniform Resource Locator)的一个组建。它以urlopen 函数的形式提供了一个非常简单的接口。
-urlopen函数可以传入一个简单的url，也可以传入一个req">
+首先，python文件开头都会有一个
+1#!/usr/bin/python
+这是用来指定用什么解释器运行脚步以及解释器所在的位置。
+
+
+​
+
+Python2.X中默认编码是ASSCII格式，在没有修改">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用Python实现爬虫需要掌握的基本知识">
 <meta property="og:url" content="http://yoursite.com/2017/02/22/python_basic_knowledge_about_crawlers/index.html">
@@ -20,22 +25,32 @@ urlopen函数可以传入一个简单的url，也可以传入一个req">
 <meta property="og:description" content="最近在用python爬取一些网站的图片，学习期间遇到一些问题，也收获了一些知识，现在整理下有关内容。
 
 Python基础知识的学习
-整理中。。。
+这里就简单整理了我爬虫中使用到的，并且与Java语法不同的地方。
 
-urllib2库的基本使用
-urllib2是Python获取URL(Uniform Resource Locator)的一个组建。它以urlopen 函数的形式提供了一个非常简单的接口。
-urlopen函数可以传入一个简单的url，也可以传入一个req">
-<meta property="og:updated_time" content="2017-02-22T08:29:36.000Z">
+首先，python文件开头都会有一个
+1#!/usr/bin/python
+这是用来指定用什么解释器运行脚步以及解释器所在的位置。
+
+
+​
+
+Python2.X中默认编码是ASSCII格式，在没有修改">
+<meta property="og:updated_time" content="2017-02-23T06:17:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用Python实现爬虫需要掌握的基本知识">
 <meta name="twitter:description" content="最近在用python爬取一些网站的图片，学习期间遇到一些问题，也收获了一些知识，现在整理下有关内容。
 
 Python基础知识的学习
-整理中。。。
+这里就简单整理了我爬虫中使用到的，并且与Java语法不同的地方。
 
-urllib2库的基本使用
-urllib2是Python获取URL(Uniform Resource Locator)的一个组建。它以urlopen 函数的形式提供了一个非常简单的接口。
-urlopen函数可以传入一个简单的url，也可以传入一个req">
+首先，python文件开头都会有一个
+1#!/usr/bin/python
+这是用来指定用什么解释器运行脚步以及解释器所在的位置。
+
+
+​
+
+Python2.X中默认编码是ASSCII格式，在没有修改">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -82,7 +97,62 @@ urlopen函数可以传入一个简单的url，也可以传入一个req">
         <p>最近在用python爬取一些网站的图片，学习期间遇到一些问题，也收获了一些知识，现在整理下有关内容。</p>
 <ul>
 <li><p>Python基础知识的学习</p>
-<p>整理中。。。</p>
+<p>这里就简单整理了我爬虫中使用到的，并且与Java语法不同的地方。</p>
+<ol>
+<li><p>首先，python文件开头都会有一个</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/python</div></pre></td></tr></table></figure>
+<p>这是用来指定用什么解释器运行脚步以及解释器所在的位置。</p>
+</li>
+</ol>
+<p>​</p>
+<ol>
+<li><p>Python2.X中默认编码是ASSCII格式，在没有修改编码格式时读取中文会出错。需要在头部指定编码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#coding:utf-8</div></pre></td></tr></table></figure>
+<p>Python3.X源码文件默认使用utf-8编码，所以可以正常解析中文，无需指定utf-8。</p>
+<p>​</p>
+</li>
+<li><p>Python中变量赋值不需要类型声明</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">name = &quot;darrenFantasy&quot;</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+<li><p>Python字符串</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/python</div><div class="line">#coding:utf-8</div><div class="line">name = &quot;darrenFantasy&quot;</div><div class="line">print name[0] #输出字符串中第一个字符</div><div class="line">print name[2:5] #输出字符串中第三个至第五个之间的字符串</div><div class="line">print name[6:] #输出从第七个字符开始的字符串</div><div class="line">print name * 2 #输出字符串两次</div></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">d</div><div class="line">rre</div><div class="line">Fantasy</div><div class="line">darrenFantasydarrenFantasy</div></pre></td></tr></table></figure>
+<p>Java里可以直接String+int</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">int i = 1;</div><div class="line">String name = &quot;darrenFantasy&quot;;</div><div class="line">System.out.print(name + i);</div></pre></td></tr></table></figure>
+<p>但是Python不能这样，Python必须使用str()函数把int转成String，才能拼接字符串。</p>
+<p>​</p>
+</li>
+<li><p>Python条件语句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">if 判断条件:</div><div class="line">	pass #do something</div><div class="line">else:</div><div class="line">    pass #do something</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+<li><p>Python循环语句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">for iterating_var in sequence:</div><div class="line">   statements(s)</div><div class="line"></div><div class="line"></div><div class="line">for x in range(1,10):</div><div class="line">	pass #do something</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+<li><p>Python函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">def function(parameters):</div><div class="line">	pass #do something</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+<li><p>Python文件操作</p>
+<p>创建文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">file = open(&apos;f.txt&apos;,&apos;w&apos;) #直接打开一个文件，如果文件不存在则创建文件</div></pre></td></tr></table></figure>
+<p>通常，文件使用模式 ‘r’,’w’,’a’ 来打开，分别代表，读取，写入，追加。</p>
+<p>‘r’ 模式打开已经存在的文件。</p>
+<p>‘w’ 模式打开的文件若存在则首先清空，再加入内容。</p>
+<p>‘a’ 这个模式是追加内容到文件中。</p>
+<p>另一种创建文件的方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import os</div><div class="line">os.system(&quot;touch test.txt&quot;)</div></pre></td></tr></table></figure>
+<p>读取文件：</p>
+<p>read() 一次读取全部的文件内容。</p>
+<p>readline() 每次读取文件的一行。</p>
+<p>readlines() 读取文件的所有行，返回一个字符串列表。</p>
+<p>最后，使用完记得关闭文件 file.close();</p>
+<p>​</p>
+</li>
+</ol>
 </li>
 <li><p>urllib2库的基本使用</p>
 <p>urllib2是Python获取URL(Uniform Resource Locator)的一个组建。它以urlopen 函数的形式提供了一个非常简单的接口。</p>
@@ -109,8 +179,8 @@ urlopen函数可以传入一个简单的url，也可以传入一个req">
 <li><p>Beautiful Soup的使用</p>
 <p>Beautiful Soup是Python的一个库，主要功能是从网页抓取数据。</p>
 <p><a href="http://beautifulsoup.readthedocs.io/zh_CN/latest/" target="_blank" rel="external">官方文档</a></p>
-<p>​</p>
-</li>
+<p>通常用来处理网页抓取数据，如下是获取一个网页里的全部 <em>图片标签</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">from bs4 import BeautifulSoup</div><div class="line">def getImageTagsFromHtml(html):</div><div class="line">    soup = BeautifulSoup(html, &quot;html.parser&quot;)</div><div class="line">    imageTagsList = soup.find_all(&apos;img&apos;):</div><div class="line">    return imageTagsList</div></pre></td></tr></table></figure></li>
 </ul>
 
       
