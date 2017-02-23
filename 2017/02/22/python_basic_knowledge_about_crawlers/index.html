@@ -35,7 +35,7 @@ Python基础知识的学习
 ​
 
 Python2.X中默认编码是ASSCII格式，在没有修改">
-<meta property="og:updated_time" content="2017-02-23T06:17:13.000Z">
+<meta property="og:updated_time" content="2017-02-23T06:40:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用Python实现爬虫需要掌握的基本知识">
 <meta name="twitter:description" content="最近在用python爬取一些网站的图片，学习期间遇到一些问题，也收获了一些知识，现在整理下有关内容。
@@ -180,7 +180,7 @@ Python2.X中默认编码是ASSCII格式，在没有修改">
 <p>Beautiful Soup是Python的一个库，主要功能是从网页抓取数据。</p>
 <p><a href="http://beautifulsoup.readthedocs.io/zh_CN/latest/" target="_blank" rel="external">官方文档</a></p>
 <p>通常用来处理网页抓取数据，如下是获取一个网页里的全部 <em>图片标签</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">from bs4 import BeautifulSoup</div><div class="line">def getImageTagsFromHtml(html):</div><div class="line">    soup = BeautifulSoup(html, &quot;html.parser&quot;)</div><div class="line">    imageTagsList = soup.find_all(&apos;img&apos;):</div><div class="line">    return imageTagsList</div></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">from bs4 import BeautifulSoup</div><div class="line">def getImageTagsFromHtml(html):</div><div class="line">    soup = BeautifulSoup(html, &quot;html.parser&quot;)</div><div class="line">    imageTagsList = soup.find_all(&apos;img&apos;)</div><div class="line">    return imageTagsList</div></pre></td></tr></table></figure></li>
 </ul>
 
       
